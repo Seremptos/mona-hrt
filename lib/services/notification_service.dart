@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:mona/util/string_parsing.dart';
@@ -50,10 +51,16 @@ class NotificationService {
       requestSoundPermission: false,
     );
 
+    const windowsSettings = WindowsInitializationSettings(
+        appName: "Mona",
+        appUserModelId: "Mona-HRT.Mona.${kDebugMode ? "debug" : "release"}",
+        guid: "a406295b-42eb-4bb4-adbd-5bf275afe876");
+
     await _notificationsPlugin.initialize(
         settings: InitializationSettings(
       android: androidSettings,
       iOS: iosSettings,
+      windows: windowsSettings,
     ));
 
     _initialized = true;
