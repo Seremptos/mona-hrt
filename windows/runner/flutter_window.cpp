@@ -1,6 +1,11 @@
 #include "flutter_window.h"
 
 #include <optional>
+// Mona start
+#include "Mona.h"
+#include <windows.h>
+#include <winreg.h>
+// Mona end
 
 #include "flutter/generated_plugin_registrant.h"
 
@@ -13,6 +18,16 @@ bool FlutterWindow::OnCreate() {
   if (!Win32Window::OnCreate()) {
     return false;
   }
+
+  // Mona start - Resize window
+  SIZE windowSize = GetWindowDimensions(GetHandle(), 0.3f, 0.6f);
+  GetHandle();
+  // Mona end
+
+  // Mona start - Change icon between light and dark mode
+  LoadIcons();
+  SetIcon(GetHandle(), FetchDarkModeStatus());
+  // Mona end
 
   RECT frame = GetClientArea();
 
@@ -65,6 +80,23 @@ FlutterWindow::MessageHandler(HWND hwnd, UINT const message,
     case WM_FONTCHANGE:
       flutter_controller_->engine()->ReloadSystemFonts();
       break;
+    // Mona start - Change icon between light and dark mode
+    case WM_SETTINGCHANGE:
+      {
+        // Only run if it concerns light/dark mode
+        if (!lparam || wcscmp((LPCWSTR)lparam, L"ImmersiveColorSet") != 0) break;
+        SwitchMode(hwnd);
+      }
+      break;
+
+    // Mona end
+    // Mona start - Force window size to not be too small
+    case WM_GETMINMAXINFO:
+      {
+        SetMinMaxWindowSize(hwnd, lparam);
+      }
+      break;
+    // Mona end
   }
 
   return Win32Window::MessageHandler(hwnd, message, wparam, lparam);
