@@ -121,7 +121,7 @@ class _LanguagePageState extends State<LanguagePage> {
               children: [
                 TappableListTile(
                   leading: const Icon(Symbols.translate_rounded),
-                  title: t.languageMissing,
+                  title: t.missingTranslation,
                   subtitle: t.translateAppDescription,
                   onTap: () => launchUrl(
                     Uri.parse(_weblateUrl),

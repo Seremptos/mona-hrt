@@ -74,7 +74,7 @@
   "reportBugDescription": "Open an issue on GitHub",
   "translateApp": "Translate the app",
   "translateAppDescription": "Help translate Mona on Weblate",
-  "languageMissing": "Is your language missing?",
+  "missingTranslation": "Is a translation missing?",
   "donate": "Donate",
   "donateDescription": "Support Mona on Ko-fi",
   "backupSaved": "Backup saved",

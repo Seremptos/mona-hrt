@@ -193,7 +193,7 @@ class TranslationsFr extends Translations
   @override
   String get translateAppDescription => 'Aider à traduire Mona sur Weblate';
   @override
-  String get languageMissing => 'Il manque votre langue ?';
+  String get missingTranslation => 'Il manque une traduction ?';
   @override
   String get donate => 'Faire un don';
   @override
@@ -923,7 +923,7 @@ extension on TranslationsFr {
       'reportBugDescription' => 'Ouvrir une issue sur GitHub',
       'translateApp' => 'Traduire l\'application',
       'translateAppDescription' => 'Aider à traduire Mona sur Weblate',
-      'languageMissing' => 'Il manque votre langue ?',
+      'missingTranslation' => 'Il manque une traduction ?',
       'donate' => 'Faire un don',
       'donateDescription' => 'Soutenir Mona sur Ko-fi',
       'backupSaved' => 'Sauvegarde enregistrée',

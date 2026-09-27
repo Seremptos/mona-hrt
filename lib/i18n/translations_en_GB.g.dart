@@ -189,7 +189,7 @@ class TranslationsEnGb extends Translations
   @override
   String get translateAppDescription => 'Help translate Mona on Weblate';
   @override
-  String get languageMissing => 'Is your language missing?';
+  String get missingTranslation => 'Is a translation missing?';
   @override
   String get donate => 'Donate';
   @override
@@ -884,7 +884,7 @@ extension on TranslationsEnGb {
       'reportBugDescription' => 'Open an issue on GitHub',
       'translateApp' => 'Translate the app',
       'translateAppDescription' => 'Help translate Mona on Weblate',
-      'languageMissing' => 'Is your language missing?',
+      'missingTranslation' => 'Is a translation missing?',
       'donate' => 'Donate',
       'donateDescription' => 'Support Mona on Ko-fi',
       'backupSaved' => 'Backup saved',
