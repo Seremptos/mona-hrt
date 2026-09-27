@@ -14,7 +14,7 @@ typedef LanguageNames = ({String english, String native});
 
 const _weblateUrl = 'https://hosted.weblate.org/engage/mona/';
 
-class LanguagePage extends StatelessWidget {
+class LanguagePage extends StatefulWidget {
   const LanguagePage({super.key});
 
   static const Map<String, LanguageNames> languageNames = {
@@ -46,7 +46,25 @@ class LanguagePage extends StatelessWidget {
   static String? nativeNameOf(String tag) => languageNames[tag]?.native;
 
   @override
+  State<LanguagePage> createState() => _LanguagePageState();
+}
+
+class _LanguagePageState extends State<LanguagePage> {
+  final _cardKey = GlobalKey();
+  double _cardHeight = 0;
+
+  void _measureCard() {
+    if (!mounted) return;
+    final height = _cardKey.currentContext?.size?.height;
+    if (height != null && height != _cardHeight) {
+      setState(() => _cardHeight = height);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) => _measureCard());
+
     final preferencesService = context.watch<PreferencesService>();
     final localeProvider = context.read<LocaleProvider>();
     final savedTag = preferencesService.savedLanguageTag;
@@ -77,7 +95,7 @@ class LanguagePage extends StatelessWidget {
             child: ListView(
               padding: EdgeInsets.only(
                 bottom: MediaQuery.paddingOf(context).bottom +
-                    72 + // card height is 72
+                    _cardHeight +
                     borderPadding,
               ),
               children: [
@@ -85,7 +103,8 @@ class LanguagePage extends StatelessWidget {
                   title: Text(t.languageFollowDevice),
                   value: null,
                 ),
-                for (final tag in languageNames.keys) _buildTile(tag),
+                for (final tag in LanguagePage.languageNames.keys)
+                  _buildTile(tag),
               ],
             ),
           ),
@@ -94,6 +113,7 @@ class LanguagePage extends StatelessWidget {
             right: borderPadding,
             bottom: MediaQuery.paddingOf(context).bottom,
             child: M3ESegmentedColumn(
+              key: _cardKey,
               padding: EdgeInsets.zero,
               elevation: 2,
               children: [
@@ -115,7 +135,7 @@ class LanguagePage extends StatelessWidget {
   }
 
   Widget _buildTile(String tag) {
-    final names = languageNames[tag];
+    final names = LanguagePage.languageNames[tag];
     return RadioListTile<String?>(
       title: Text(names?.native ?? tag),
       subtitle: (names != null && tag != 'en') ? Text(names.english) : null,
