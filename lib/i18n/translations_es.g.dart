@@ -112,8 +112,6 @@ class TranslationsEs extends Translations
   @override
   String get languageFollowDevice => 'Seguir el idioma del dispositivo';
   @override
-  String get selectLanguage => 'Seleccionar idioma';
-  @override
   String get enableNotifications => 'Activar notificaciones';
   @override
   String get enableNotificationsDescription => 'Enviar recordatorios';
@@ -786,7 +784,6 @@ extension on TranslationsEs {
       'noSchedules' => 'Sin horarios',
       'language' => 'Idioma',
       'languageFollowDevice' => 'Seguir el idioma del dispositivo',
-      'selectLanguage' => 'Seleccionar idioma',
       'enableNotifications' => 'Activar notificaciones',
       'enableNotificationsDescription' => 'Enviar recordatorios',
       'notificationsDisabledTitle' => 'Las notificaciones están desactivadas',

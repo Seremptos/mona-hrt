@@ -109,8 +109,6 @@ class TranslationsNl extends Translations
   @override
   String get languageFollowDevice => 'Apparaattaal volgen';
   @override
-  String get selectLanguage => 'Taal Selecteren';
-  @override
   String get enableNotifications => 'Meldingen aanzetten';
   @override
   String get enableNotificationsDescription => 'Reminders verzenden';
@@ -788,7 +786,6 @@ extension on TranslationsNl {
       'noSchedules' => 'Geen geplande momenten',
       'language' => 'Taal',
       'languageFollowDevice' => 'Apparaattaal volgen',
-      'selectLanguage' => 'Taal Selecteren',
       'enableNotifications' => 'Meldingen aanzetten',
       'enableNotificationsDescription' => 'Reminders verzenden',
       'notificationsDisabledTitle' => 'Meldingen staan uit',

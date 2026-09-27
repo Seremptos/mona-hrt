@@ -86,8 +86,6 @@ class TranslationsEt extends Translations
   @override
   String get languageFollowDevice => 'Järgi seadme keelt';
   @override
-  String get selectLanguage => 'Vali keel';
-  @override
   String get enableNotifications => 'Võta teavitused kasutusele';
   @override
   String get enableNotificationsDescription => 'Saada meeldetuletusi';
@@ -151,7 +149,6 @@ extension on TranslationsEt {
       'scheduleFrequencyIntervalDescription' => 'Iga paari päeva järel',
       'language' => 'Keel',
       'languageFollowDevice' => 'Järgi seadme keelt',
-      'selectLanguage' => 'Vali keel',
       'enableNotifications' => 'Võta teavitused kasutusele',
       'enableNotificationsDescription' => 'Saada meeldetuletusi',
       'asNeeded' => 'Vastavalt vajadusele',

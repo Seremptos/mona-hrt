@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:intl/locale.dart' as intl;
+import 'package:m3e_core/m3e_core.dart';
+import 'package:material_symbols_icons/symbols.dart';
 import 'package:mona/i18n/locale_provider.dart';
 import 'package:mona/i18n/translations.g.dart';
 import 'package:mona/services/preferences_service.dart';
+import 'package:mona/ui/constants/dimensions.dart';
+import 'package:mona/ui/widgets/tappable_list_tile.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 typedef LanguageNames = ({String english, String native});
+
+const _weblateUrl = 'https://hosted.weblate.org/engage/mona/';
 
 class LanguagePage extends StatelessWidget {
   const LanguagePage({super.key});
@@ -62,18 +69,47 @@ class LanguagePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(t.language)),
-      body: RadioGroup<String?>(
-        groupValue: savedTag,
-        onChanged: onLanguageChanged,
-        child: ListView(
-          children: [
-            RadioListTile<String?>(
-              title: Text(t.languageFollowDevice),
-              value: null,
+      body: Stack(
+        children: [
+          RadioGroup<String?>(
+            groupValue: savedTag,
+            onChanged: onLanguageChanged,
+            child: ListView(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.paddingOf(context).bottom +
+                    72 + // card height is 72
+                    borderPadding,
+              ),
+              children: [
+                RadioListTile<String?>(
+                  title: Text(t.languageFollowDevice),
+                  value: null,
+                ),
+                for (final tag in languageNames.keys) _buildTile(tag),
+              ],
             ),
-            for (final tag in languageNames.keys) _buildTile(tag),
-          ],
-        ),
+          ),
+          Positioned(
+            left: borderPadding,
+            right: borderPadding,
+            bottom: MediaQuery.paddingOf(context).bottom,
+            child: M3ESegmentedColumn(
+              padding: EdgeInsets.zero,
+              elevation: 2,
+              children: [
+                TappableListTile(
+                  leading: const Icon(Symbols.translate_rounded),
+                  title: t.languageMissing,
+                  subtitle: t.translateAppDescription,
+                  onTap: () => launchUrl(
+                    Uri.parse(_weblateUrl),
+                    mode: LaunchMode.externalApplication,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

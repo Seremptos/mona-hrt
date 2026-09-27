@@ -131,8 +131,6 @@ class TranslationsFr extends Translations
   @override
   String get languageFollowDevice => 'Suivre la langue de l\'appareil';
   @override
-  String get selectLanguage => 'Sélectionner la langue';
-  @override
   String get enableNotifications => 'Activer les notifications';
   @override
   String get enableNotificationsDescription => 'Envoyer des rappels';
@@ -194,6 +192,8 @@ class TranslationsFr extends Translations
   String get translateApp => 'Traduire l\'application';
   @override
   String get translateAppDescription => 'Aider à traduire Mona sur Weblate';
+  @override
+  String get languageMissing => 'Il manque votre langue ?';
   @override
   String get donate => 'Faire un don';
   @override
@@ -890,7 +890,6 @@ extension on TranslationsFr {
       'noSchedules' => 'Aucun planning',
       'language' => 'Langue',
       'languageFollowDevice' => 'Suivre la langue de l\'appareil',
-      'selectLanguage' => 'Sélectionner la langue',
       'enableNotifications' => 'Activer les notifications',
       'enableNotificationsDescription' => 'Envoyer des rappels',
       'anchorToLastIntake' => 'Recalculer à chaque prise',
@@ -924,6 +923,7 @@ extension on TranslationsFr {
       'reportBugDescription' => 'Ouvrir une issue sur GitHub',
       'translateApp' => 'Traduire l\'application',
       'translateAppDescription' => 'Aider à traduire Mona sur Weblate',
+      'languageMissing' => 'Il manque votre langue ?',
       'donate' => 'Faire un don',
       'donateDescription' => 'Soutenir Mona sur Ko-fi',
       'backupSaved' => 'Sauvegarde enregistrée',

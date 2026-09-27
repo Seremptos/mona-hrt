@@ -163,9 +163,6 @@ class Translations with BaseTranslations<AppLocale, Translations> {
   /// en: 'Follow device language'
   String get languageFollowDevice => 'Follow device language';
 
-  /// en: 'Select Language'
-  String get selectLanguage => 'Select Language';
-
   /// en: 'Enable notifications'
   String get enableNotifications => 'Enable notifications';
 
@@ -253,6 +250,9 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 
   /// en: 'Help translate Mona on Weblate'
   String get translateAppDescription => 'Help translate Mona on Weblate';
+
+  /// en: 'Is your language missing?'
+  String get languageMissing => 'Is your language missing?';
 
   /// en: 'Donate'
   String get donate => 'Donate';
@@ -1147,7 +1147,6 @@ extension on Translations {
       'noSchedules' => 'No schedules',
       'language' => 'Language',
       'languageFollowDevice' => 'Follow device language',
-      'selectLanguage' => 'Select Language',
       'enableNotifications' => 'Enable notifications',
       'enableNotificationsDescription' => 'Send reminders',
       'anchorToLastIntake' => 'Recalculate based on last intake',
@@ -1180,6 +1179,7 @@ extension on Translations {
       'reportBugDescription' => 'Open an issue on GitHub',
       'translateApp' => 'Translate the app',
       'translateAppDescription' => 'Help translate Mona on Weblate',
+      'languageMissing' => 'Is your language missing?',
       'donate' => 'Donate',
       'donateDescription' => 'Support Mona on Ko-fi',
       'backupSaved' => 'Backup saved',
