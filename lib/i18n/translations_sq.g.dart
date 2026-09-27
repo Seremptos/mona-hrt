@@ -54,8 +54,6 @@ class TranslationsSq extends Translations
 
   // Translations
   @override
-  String get appTitle => 'Mona';
-  @override
   String get nav_home => 'Mona';
   @override
   String get nav_intakes => 'Marrje';
@@ -806,7 +804,6 @@ class TranslationsSq extends Translations
 extension on TranslationsSq {
   dynamic _flatMapFunction(String path) {
     return switch (path) {
-      'appTitle' => 'Mona',
       'nav_home' => 'Mona',
       'nav_intakes' => 'Marrje',
       'nav_levels' => 'Nivele',
