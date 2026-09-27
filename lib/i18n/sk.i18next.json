@@ -40,7 +40,6 @@
   "schedulesCreated_other": "Vytvorených {{count}} plánov",
   "language": "Jazyk",
   "languageFollowDevice": "Jazyk podľa zariadenia",
-  "selectLanguage": "Vyber jazyk",
   "enableNotifications": "Zapni notifikácie",
   "enableNotificationsDescription": "Posielať pripomienky",
   "notificationsDisabledTitle": "Notifikácie sú vypnuté",

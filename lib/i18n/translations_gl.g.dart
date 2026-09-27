@@ -112,8 +112,6 @@ class TranslationsGl extends Translations
   @override
   String get languageFollowDevice => 'Seguir o idioma do dispositivo';
   @override
-  String get selectLanguage => 'Seleccionar idioma';
-  @override
   String get enableNotifications => 'Activar notificacións';
   @override
   String get enableNotificationsDescription => 'Enviar recordatorios';
@@ -503,7 +501,6 @@ extension on TranslationsGl {
       'noSchedules' => 'Sen horarios',
       'language' => 'Idioma',
       'languageFollowDevice' => 'Seguir o idioma do dispositivo',
-      'selectLanguage' => 'Seleccionar idioma',
       'enableNotifications' => 'Activar notificacións',
       'enableNotificationsDescription' => 'Enviar recordatorios',
       'notificationsDisabledTitle' => 'As notificacións están desactivadas',

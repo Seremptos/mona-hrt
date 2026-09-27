@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:intl/locale.dart' as intl;
+import 'package:m3e_core/m3e_core.dart';
+import 'package:material_symbols_icons/symbols.dart';
 import 'package:mona/i18n/locale_provider.dart';
 import 'package:mona/i18n/translations.g.dart';
 import 'package:mona/services/preferences_service.dart';
+import 'package:mona/ui/constants/dimensions.dart';
+import 'package:mona/ui/widgets/tappable_list_tile.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 typedef LanguageNames = ({String english, String native});
 
-class LanguagePage extends StatelessWidget {
+const _weblateUrl = 'https://hosted.weblate.org/engage/mona/';
+
+class LanguagePage extends StatefulWidget {
   const LanguagePage({super.key});
 
   static const Map<String, LanguageNames> languageNames = {
@@ -40,7 +47,25 @@ class LanguagePage extends StatelessWidget {
   static String? nativeNameOf(String tag) => languageNames[tag]?.native;
 
   @override
+  State<LanguagePage> createState() => _LanguagePageState();
+}
+
+class _LanguagePageState extends State<LanguagePage> {
+  final _cardKey = GlobalKey();
+  double _cardHeight = 0;
+
+  void _measureCard() {
+    if (!mounted) return;
+    final height = _cardKey.currentContext?.size?.height;
+    if (height != null && height != _cardHeight) {
+      setState(() => _cardHeight = height);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) => _measureCard());
+
     final preferencesService = context.watch<PreferencesService>();
     final localeProvider = context.read<LocaleProvider>();
     final savedTag = preferencesService.savedLanguageTag;
@@ -63,24 +88,55 @@ class LanguagePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(t.language)),
-      body: RadioGroup<String?>(
-        groupValue: savedTag,
-        onChanged: onLanguageChanged,
-        child: ListView(
-          children: [
-            RadioListTile<String?>(
-              title: Text(t.languageFollowDevice),
-              value: null,
+      body: Stack(
+        children: [
+          RadioGroup<String?>(
+            groupValue: savedTag,
+            onChanged: onLanguageChanged,
+            child: ListView(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.paddingOf(context).bottom +
+                    _cardHeight +
+                    borderPadding,
+              ),
+              children: [
+                RadioListTile<String?>(
+                  title: Text(t.languageFollowDevice),
+                  value: null,
+                ),
+                for (final tag in LanguagePage.languageNames.keys)
+                  _buildTile(tag),
+              ],
             ),
-            for (final tag in languageNames.keys) _buildTile(tag),
-          ],
-        ),
+          ),
+          Positioned(
+            left: borderPadding,
+            right: borderPadding,
+            bottom: MediaQuery.paddingOf(context).bottom,
+            child: M3ESegmentedColumn(
+              key: _cardKey,
+              padding: EdgeInsets.zero,
+              elevation: 2,
+              children: [
+                TappableListTile(
+                  leading: const Icon(Symbols.translate_rounded),
+                  title: t.languageMissing,
+                  subtitle: t.translateAppDescription,
+                  onTap: () => launchUrl(
+                    Uri.parse(_weblateUrl),
+                    mode: LaunchMode.externalApplication,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildTile(String tag) {
-    final names = languageNames[tag];
+    final names = LanguagePage.languageNames[tag];
     return RadioListTile<String?>(
       title: Text(names?.native ?? tag),
       subtitle: (names != null && tag != 'en') ? Text(names.english) : null,

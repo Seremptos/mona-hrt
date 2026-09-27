@@ -23,6 +23,11 @@ import 'package:mona/ui/widgets/tinted_switch_tile.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+const _reportBugUrl = 'https://github.com/mona-hrt/mona/issues/new';
+const _translateUrl = 'https://hosted.weblate.org/engage/mona/';
+const _donateUrl = 'https://ko-fi.com/deliacheminot';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -167,6 +172,10 @@ class _SettingsPageState extends State<SettingsPage>
         }
       }
     }
+  }
+
+  Future<void> _openUrl(String url) async {
+    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
   }
 
   Widget _sectionHeader(String title) {
@@ -364,6 +373,31 @@ class _SettingsPageState extends State<SettingsPage>
                 subtitle: t.importDataSubtitle,
                 trailing: const Icon(Symbols.download_rounded),
                 onTap: _importData,
+              ),
+            ],
+          ),
+          SizedBox(height: borderPadding),
+          _sectionHeader(t.getInvolved),
+          M3ESegmentedColumn(
+            padding: EdgeInsets.zero,
+            children: [
+              TappableListTile(
+                title: t.reportBug,
+                subtitle: t.reportBugDescription,
+                trailing: const Icon(Symbols.bug_report_rounded),
+                onTap: () => _openUrl(_reportBugUrl),
+              ),
+              TappableListTile(
+                title: t.translateApp,
+                subtitle: t.translateAppDescription,
+                trailing: const Icon(Symbols.translate_rounded),
+                onTap: () => _openUrl(_translateUrl),
+              ),
+              TappableListTile(
+                title: t.donate,
+                subtitle: t.donateDescription,
+                trailing: const Icon(Symbols.favorite_rounded),
+                onTap: () => _openUrl(_donateUrl),
               ),
             ],
           ),

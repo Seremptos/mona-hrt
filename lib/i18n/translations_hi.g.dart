@@ -128,8 +128,6 @@ class TranslationsHi extends Translations
   @override
   String get languageFollowDevice => 'Device ki bhasha ka palan kare';
   @override
-  String get selectLanguage => 'Bhasha chune';
-  @override
   String get enableNotifications => 'Notification chalu kare';
   @override
   String get enableNotificationsDescription => 'Reminder bhejo';
@@ -383,7 +381,6 @@ extension on TranslationsHi {
       'noSchedules' => 'Koi schedule nahi',
       'language' => 'Bhasha',
       'languageFollowDevice' => 'Device ki bhasha ka palan kare',
-      'selectLanguage' => 'Bhasha chune',
       'enableNotifications' => 'Notification chalu kare',
       'enableNotificationsDescription' => 'Reminder bhejo',
       'anchorToLastIntake' => 'Pickle sevan ki aadhar par',

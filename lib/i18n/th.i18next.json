@@ -32,7 +32,6 @@
   "schedulesCreated_other": "สร้างแล้ว {{count}}",
   "language": "ภาษา",
   "languageFollowDevice": "ตามภาษาระบบ",
-  "selectLanguage": "เลือกภาษา",
   "enableNotifications": "เปิดการแจ้งเตือน",
   "enableNotificationsDescription": "ส่งการแจ้งเตือน",
   "notificationsDisabledTitle": "การแจ้งเตือนได้ปิดอยู่",

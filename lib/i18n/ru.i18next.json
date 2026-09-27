@@ -40,7 +40,6 @@
   "schedulesCreated_many": "{{count}} создано",
   "language": "Язык",
   "languageFollowDevice": "Язык устройства",
-  "selectLanguage": "Выбрать язык",
   "enableNotifications": "Включить уведомления",
   "enableNotificationsDescription": "Отправлять напоминания",
   "notificationsDisabledTitle": "Уведомления отключены",

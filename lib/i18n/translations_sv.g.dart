@@ -96,8 +96,6 @@ class TranslationsSv extends Translations
   @override
   String get languageFollowDevice => 'Använd enhetens språk';
   @override
-  String get selectLanguage => 'Välj Språk';
-  @override
   String get enableNotifications => 'Aktivera aviseringar';
   @override
   String get ester => 'Ester';
@@ -756,7 +754,6 @@ extension on TranslationsSv {
       'noSchedules' => 'Inga scheman',
       'language' => 'Språk',
       'languageFollowDevice' => 'Använd enhetens språk',
-      'selectLanguage' => 'Välj Språk',
       'enableNotifications' => 'Aktivera aviseringar',
       'ester' => 'Ester',
       'estradiol' => 'Östradiol',

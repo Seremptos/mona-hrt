@@ -163,9 +163,6 @@ class Translations with BaseTranslations<AppLocale, Translations> {
   /// en: 'Follow device language'
   String get languageFollowDevice => 'Follow device language';
 
-  /// en: 'Select Language'
-  String get selectLanguage => 'Select Language';
-
   /// en: 'Enable notifications'
   String get enableNotifications => 'Enable notifications';
 
@@ -238,6 +235,30 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 
   /// en: 'Mona version {version}'
   String appVersion({required Object version}) => 'Mona version ${version}';
+
+  /// en: 'Get involved'
+  String get getInvolved => 'Get involved';
+
+  /// en: 'Report a bug'
+  String get reportBug => 'Report a bug';
+
+  /// en: 'Open an issue on GitHub'
+  String get reportBugDescription => 'Open an issue on GitHub';
+
+  /// en: 'Translate the app'
+  String get translateApp => 'Translate the app';
+
+  /// en: 'Help translate Mona on Weblate'
+  String get translateAppDescription => 'Help translate Mona on Weblate';
+
+  /// en: 'Is your language missing?'
+  String get languageMissing => 'Is your language missing?';
+
+  /// en: 'Donate'
+  String get donate => 'Donate';
+
+  /// en: 'Support Mona on Ko-fi'
+  String get donateDescription => 'Support Mona on Ko-fi';
 
   /// en: 'Backup saved'
   String get backupSaved => 'Backup saved';
@@ -1126,7 +1147,6 @@ extension on Translations {
       'noSchedules' => 'No schedules',
       'language' => 'Language',
       'languageFollowDevice' => 'Follow device language',
-      'selectLanguage' => 'Select Language',
       'enableNotifications' => 'Enable notifications',
       'enableNotificationsDescription' => 'Send reminders',
       'anchorToLastIntake' => 'Recalculate based on last intake',
@@ -1154,6 +1174,14 @@ extension on Translations {
       'checkForUpdatesDescription' =>
         'Check for the latest version manually\nThis will connect you to Internet\n(No data will be sent)',
       'appVersion' => ({required Object version}) => 'Mona version ${version}',
+      'getInvolved' => 'Get involved',
+      'reportBug' => 'Report a bug',
+      'reportBugDescription' => 'Open an issue on GitHub',
+      'translateApp' => 'Translate the app',
+      'translateAppDescription' => 'Help translate Mona on Weblate',
+      'languageMissing' => 'Is your language missing?',
+      'donate' => 'Donate',
+      'donateDescription' => 'Support Mona on Ko-fi',
       'backupSaved' => 'Backup saved',
       'exportFailed' => ({required Object error}) =>
           'Failed to export: ${error}',

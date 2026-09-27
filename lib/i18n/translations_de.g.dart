@@ -113,8 +113,6 @@ class TranslationsDe extends Translations
   @override
   String get languageFollowDevice => 'Gerätesprache verwenden';
   @override
-  String get selectLanguage => 'Sprache auswählen';
-  @override
   String get enableNotifications => 'Benachrichtigungen aktivieren';
   @override
   String get enableNotificationsDescription => 'Erinnerungen senden';
@@ -791,7 +789,6 @@ extension on TranslationsDe {
       'noSchedules' => 'Keine Zeitpläne',
       'language' => 'Sprache',
       'languageFollowDevice' => 'Gerätesprache verwenden',
-      'selectLanguage' => 'Sprache auswählen',
       'enableNotifications' => 'Benachrichtigungen aktivieren',
       'enableNotificationsDescription' => 'Erinnerungen senden',
       'notificationsDisabledTitle' => 'Benachrichtigungen sind deaktiviert',

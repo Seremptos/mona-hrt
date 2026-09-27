@@ -112,8 +112,6 @@ class TranslationsUk extends Translations
   @override
   String get languageFollowDevice => 'Мова пристрою';
   @override
-  String get selectLanguage => 'Вибрати мову';
-  @override
   String get enableNotifications => 'Увімкнути сповіщення';
   @override
   String get enableNotificationsDescription => 'Надсилати нагадування';
@@ -785,7 +783,6 @@ extension on TranslationsUk {
       'noSchedules' => 'Розкладів немає',
       'language' => 'Мова',
       'languageFollowDevice' => 'Мова пристрою',
-      'selectLanguage' => 'Вибрати мову',
       'enableNotifications' => 'Увімкнути сповіщення',
       'enableNotificationsDescription' => 'Надсилати нагадування',
       'notificationsDisabledTitle' => 'Сповіщення вимкнено',

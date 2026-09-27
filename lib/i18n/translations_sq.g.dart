@@ -127,8 +127,6 @@ class TranslationsSq extends Translations
   @override
   String get languageFollowDevice => 'Ndiq gjuhën e pajisjes';
   @override
-  String get selectLanguage => 'Zgjidh gjuhën';
-  @override
   String get enableNotifications => 'Aktivizo njoftimet';
   @override
   String get enableNotificationsDescription => 'Dërgo kujtues';
@@ -840,7 +838,6 @@ extension on TranslationsSq {
       'noSchedules' => 'Nuk ka orare',
       'language' => 'Gjuha',
       'languageFollowDevice' => 'Ndiq gjuhën e pajisjes',
-      'selectLanguage' => 'Zgjidh gjuhën',
       'enableNotifications' => 'Aktivizo njoftimet',
       'enableNotificationsDescription' => 'Dërgo kujtues',
       'anchorToLastIntake' => 'Rillogarit sipas marrjes së fundit',
