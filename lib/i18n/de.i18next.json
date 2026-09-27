@@ -36,7 +36,6 @@
   "schedulesCreated_other": "{{count}} erstellt",
   "language": "Sprache",
   "languageFollowDevice": "Gerätesprache verwenden",
-  "selectLanguage": "Sprache auswählen",
   "enableNotifications": "Benachrichtigungen aktivieren",
   "enableNotificationsDescription": "Erinnerungen senden",
   "notificationsDisabledTitle": "Benachrichtigungen sind deaktiviert",

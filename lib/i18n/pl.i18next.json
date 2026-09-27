@@ -44,7 +44,6 @@
   "schedulesCreated_many": "Utworzono: {{count}}",
   "language": "Język",
   "languageFollowDevice": "Użyj języka urządzenia",
-  "selectLanguage": "Wybierz język",
   "enableNotifications": "Włącz powiadomienia",
   "enableNotificationsDescription": "Wysyłaj przypomnienia",
   "anchorToLastIntake": "Przelicz na podstawie ostatniego przyjęcia",

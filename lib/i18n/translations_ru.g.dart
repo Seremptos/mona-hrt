@@ -112,8 +112,6 @@ class TranslationsRu extends Translations
   @override
   String get languageFollowDevice => 'Язык устройства';
   @override
-  String get selectLanguage => 'Выбрать язык';
-  @override
   String get enableNotifications => 'Включить уведомления';
   @override
   String get enableNotificationsDescription => 'Отправлять напоминания';
@@ -784,7 +782,6 @@ extension on TranslationsRu {
       'noSchedules' => 'Нет расписаний',
       'language' => 'Язык',
       'languageFollowDevice' => 'Язык устройства',
-      'selectLanguage' => 'Выбрать язык',
       'enableNotifications' => 'Включить уведомления',
       'enableNotificationsDescription' => 'Отправлять напоминания',
       'notificationsDisabledTitle' => 'Уведомления отключены',

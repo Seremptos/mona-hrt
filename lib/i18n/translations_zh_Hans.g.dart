@@ -128,8 +128,6 @@ class TranslationsZhHans extends Translations
   @override
   String get languageFollowDevice => '跟随系统语言';
   @override
-  String get selectLanguage => '选择语言';
-  @override
   String get enableNotifications => '启用通知';
   @override
   String get enableNotificationsDescription => '发送提醒';
@@ -773,7 +771,6 @@ extension on TranslationsZhHans {
       'noSchedules' => '暂无计划',
       'language' => '语言',
       'languageFollowDevice' => '跟随系统语言',
-      'selectLanguage' => '选择语言',
       'enableNotifications' => '启用通知',
       'enableNotificationsDescription' => '发送提醒',
       'anchorToLastIntake' => '按上次服用时间重新计算',

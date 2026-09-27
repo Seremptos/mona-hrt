@@ -112,8 +112,6 @@ class TranslationsSk extends Translations
   @override
   String get languageFollowDevice => 'Jazyk podľa zariadenia';
   @override
-  String get selectLanguage => 'Vyber jazyk';
-  @override
   String get enableNotifications => 'Zapni notifikácie';
   @override
   String get enableNotificationsDescription => 'Posielať pripomienky';
@@ -785,7 +783,6 @@ extension on TranslationsSk {
       'noSchedules' => 'Žiadne plány',
       'language' => 'Jazyk',
       'languageFollowDevice' => 'Jazyk podľa zariadenia',
-      'selectLanguage' => 'Vyber jazyk',
       'enableNotifications' => 'Zapni notifikácie',
       'enableNotificationsDescription' => 'Posielať pripomienky',
       'notificationsDisabledTitle' => 'Notifikácie sú vypnuté',

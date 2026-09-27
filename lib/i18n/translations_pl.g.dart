@@ -114,8 +114,6 @@ class TranslationsPl extends Translations
   @override
   String get languageFollowDevice => 'Użyj języka urządzenia';
   @override
-  String get selectLanguage => 'Wybierz język';
-  @override
   String get enableNotifications => 'Włącz powiadomienia';
   @override
   String get enableNotificationsDescription => 'Wysyłaj przypomnienia';
@@ -789,7 +787,6 @@ extension on TranslationsPl {
       'noSchedules' => 'Brak harmonogramów',
       'language' => 'Język',
       'languageFollowDevice' => 'Użyj języka urządzenia',
-      'selectLanguage' => 'Wybierz język',
       'enableNotifications' => 'Włącz powiadomienia',
       'enableNotificationsDescription' => 'Wysyłaj przypomnienia',
       'anchorToLastIntake' => 'Przelicz na podstawie ostatniego przyjęcia',

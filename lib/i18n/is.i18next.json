@@ -36,7 +36,6 @@
   "schedulesCreated_other": "{{count}} skapiði",
   "language": "Tungumál",
   "languageFollowDevice": "Fylgja tækatungumál",
-  "selectLanguage": "Veldu tungumál",
   "enableNotifications": "Virkjaðu tilkynningar",
   "enableNotificationsDescription": "Sendaðu afgangar",
   "notificationsDisabledTitle": "Tilkynningar eru óvirkir",

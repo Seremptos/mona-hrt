@@ -36,7 +36,6 @@
   "schedulesCreated_other": "{{count}} aangemaakt",
   "language": "Taal",
   "languageFollowDevice": "Apparaattaal volgen",
-  "selectLanguage": "Taal Selecteren",
   "enableNotifications": "Meldingen aanzetten",
   "enableNotificationsDescription": "Reminders verzenden",
   "notificationsDisabledTitle": "Meldingen staan uit",

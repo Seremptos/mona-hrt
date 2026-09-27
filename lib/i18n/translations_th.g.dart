@@ -112,8 +112,6 @@ class TranslationsTh extends Translations
   @override
   String get languageFollowDevice => 'ตามภาษาระบบ';
   @override
-  String get selectLanguage => 'เลือกภาษา';
-  @override
   String get enableNotifications => 'เปิดการแจ้งเตือน';
   @override
   String get enableNotificationsDescription => 'ส่งการแจ้งเตือน';
@@ -709,7 +707,6 @@ extension on TranslationsTh {
       'noSchedules' => 'ไม่มีตารางเวลา',
       'language' => 'ภาษา',
       'languageFollowDevice' => 'ตามภาษาระบบ',
-      'selectLanguage' => 'เลือกภาษา',
       'enableNotifications' => 'เปิดการแจ้งเตือน',
       'enableNotificationsDescription' => 'ส่งการแจ้งเตือน',
       'notificationsDisabledTitle' => 'การแจ้งเตือนได้ปิดอยู่',

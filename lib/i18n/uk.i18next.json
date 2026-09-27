@@ -40,7 +40,6 @@
   "schedulesCreated_many": "Створено {{count}} розкладів",
   "language": "Мова",
   "languageFollowDevice": "Мова пристрою",
-  "selectLanguage": "Вибрати мову",
   "enableNotifications": "Увімкнути сповіщення",
   "enableNotificationsDescription": "Надсилати нагадування",
   "notificationsDisabledTitle": "Сповіщення вимкнено",

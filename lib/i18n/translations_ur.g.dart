@@ -128,8 +128,6 @@ class TranslationsUr extends Translations
   @override
   String get languageFollowDevice => 'زبان آلہ کی پیروی';
   @override
-  String get selectLanguage => 'زبان منتخب';
-  @override
   String get enableNotifications => 'اطلاعات فاعل';
   @override
   String get enableNotificationsDescription => 'یاد دہانی';
@@ -450,7 +448,6 @@ extension on TranslationsUr {
       'noSchedules' => 'کوئی شیڈیول نہیں',
       'language' => 'زبان',
       'languageFollowDevice' => 'زبان آلہ کی پیروی',
-      'selectLanguage' => 'زبان منتخب',
       'enableNotifications' => 'اطلاعات فاعل',
       'enableNotificationsDescription' => 'یاد دہانی',
       'anchorToLastIntake' => 'آخری مدخل کے مطابق دوبارہ حساب',

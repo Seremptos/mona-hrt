@@ -113,8 +113,6 @@ class TranslationsPtBr extends TranslationsPt
   @override
   String get languageFollowDevice => 'Seguir o idioma do dispositivo';
   @override
-  String get selectLanguage => 'Selecionar idioma';
-  @override
   String get enableNotifications => 'Ativar notificações';
   @override
   String get enableNotificationsDescription => 'Enviar lembretes';
@@ -786,7 +784,6 @@ extension on TranslationsPtBr {
       'noSchedules' => 'Sem cronogramas',
       'language' => 'Idioma',
       'languageFollowDevice' => 'Seguir o idioma do dispositivo',
-      'selectLanguage' => 'Selecionar idioma',
       'enableNotifications' => 'Ativar notificações',
       'enableNotificationsDescription' => 'Enviar lembretes',
       'notificationsDisabledTitle' => 'As notificações estão desativadas',

@@ -112,8 +112,6 @@ class TranslationsIs extends Translations
   @override
   String get languageFollowDevice => 'Fylgja tækatungumál';
   @override
-  String get selectLanguage => 'Veldu tungumál';
-  @override
   String get enableNotifications => 'Virkjaðu tilkynningar';
   @override
   String get enableNotificationsDescription => 'Sendaðu afgangar';
@@ -752,7 +750,6 @@ extension on TranslationsIs {
       'noSchedules' => 'Engin Áætlanir',
       'language' => 'Tungumál',
       'languageFollowDevice' => 'Fylgja tækatungumál',
-      'selectLanguage' => 'Veldu tungumál',
       'enableNotifications' => 'Virkjaðu tilkynningar',
       'enableNotificationsDescription' => 'Sendaðu afgangar',
       'notificationsDisabledTitle' => 'Tilkynningar eru óvirkir',
