@@ -239,6 +239,27 @@ class Translations with BaseTranslations<AppLocale, Translations> {
   /// en: 'Mona version {version}'
   String appVersion({required Object version}) => 'Mona version ${version}';
 
+  /// en: 'Get involved'
+  String get getInvolved => 'Get involved';
+
+  /// en: 'Report a bug'
+  String get reportBug => 'Report a bug';
+
+  /// en: 'Open an issue on GitHub'
+  String get reportBugDescription => 'Open an issue on GitHub';
+
+  /// en: 'Translate the app'
+  String get translateApp => 'Translate the app';
+
+  /// en: 'Help translate Mona on Weblate'
+  String get translateAppDescription => 'Help translate Mona on Weblate';
+
+  /// en: 'Donate'
+  String get donate => 'Donate';
+
+  /// en: 'Support Mona on Ko-fi'
+  String get donateDescription => 'Support Mona on Ko-fi';
+
   /// en: 'Backup saved'
   String get backupSaved => 'Backup saved';
 
@@ -1154,6 +1175,13 @@ extension on Translations {
       'checkForUpdatesDescription' =>
         'Check for the latest version manually\nThis will connect you to Internet\n(No data will be sent)',
       'appVersion' => ({required Object version}) => 'Mona version ${version}',
+      'getInvolved' => 'Get involved',
+      'reportBug' => 'Report a bug',
+      'reportBugDescription' => 'Open an issue on GitHub',
+      'translateApp' => 'Translate the app',
+      'translateAppDescription' => 'Help translate Mona on Weblate',
+      'donate' => 'Donate',
+      'donateDescription' => 'Support Mona on Ko-fi',
       'backupSaved' => 'Backup saved',
       'exportFailed' => ({required Object error}) =>
           'Failed to export: ${error}',

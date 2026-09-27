@@ -181,6 +181,20 @@ class TranslationsEnGb extends Translations
   @override
   String appVersion({required Object version}) => 'Mona version ${version}';
   @override
+  String get getInvolved => 'Get involved';
+  @override
+  String get reportBug => 'Report a bug';
+  @override
+  String get reportBugDescription => 'Open an issue on GitHub';
+  @override
+  String get translateApp => 'Translate the app';
+  @override
+  String get translateAppDescription => 'Help translate Mona on Weblate';
+  @override
+  String get donate => 'Donate';
+  @override
+  String get donateDescription => 'Support Mona on Ko-fi';
+  @override
   String get backupSaved => 'Backup saved';
   @override
   String exportFailed({required Object error}) => 'Failed to export: ${error}';
@@ -866,6 +880,13 @@ extension on TranslationsEnGb {
       'checkForUpdatesDescription' =>
         'Check for the latest version manually\nThis will connect you to Internet\n(No data will be sent)',
       'appVersion' => ({required Object version}) => 'Mona version ${version}',
+      'getInvolved' => 'Get involved',
+      'reportBug' => 'Report a bug',
+      'reportBugDescription' => 'Open an issue on GitHub',
+      'translateApp' => 'Translate the app',
+      'translateAppDescription' => 'Help translate Mona on Weblate',
+      'donate' => 'Donate',
+      'donateDescription' => 'Support Mona on Ko-fi',
       'backupSaved' => 'Backup saved',
       'exportFailed' => ({required Object error}) =>
           'Failed to export: ${error}',
