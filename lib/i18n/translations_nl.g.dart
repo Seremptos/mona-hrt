@@ -109,8 +109,6 @@ class TranslationsNl extends Translations
   @override
   String get languageFollowDevice => 'Apparaattaal volgen';
   @override
-  String get selectLanguage => 'Taal Selecteren';
-  @override
   String get enableNotifications => 'Meldingen aanzetten';
   @override
   String get enableNotificationsDescription => 'Reminders verzenden';
@@ -549,8 +547,7 @@ class TranslationsNl extends Translations
   @override
   String get adminRoute => 'Toedieningsweg';
   @override
-  String concentrationLabelPerUnit({required Object unit}) =>
-      'Dosis per ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Dosis per ${unit}';
   @override
   String get medicationTestosteroneEnanthate => 'Testosteron-enanthaat';
   @override
@@ -789,7 +786,6 @@ extension on TranslationsNl {
       'noSchedules' => 'Geen geplande momenten',
       'language' => 'Taal',
       'languageFollowDevice' => 'Apparaattaal volgen',
-      'selectLanguage' => 'Taal Selecteren',
       'enableNotifications' => 'Meldingen aanzetten',
       'enableNotificationsDescription' => 'Reminders verzenden',
       'notificationsDisabledTitle' => 'Meldingen staan uit',
@@ -1022,8 +1018,7 @@ extension on TranslationsNl {
       'supplyItem' => 'Voorraaditem',
       'needleDeadSpace' => 'Dode ruimte van de naald',
       'adminRoute' => 'Toedieningsweg',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Dosis per ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Dosis per ${unit}',
       'medicationTestosteroneEnanthate' => 'Testosteron-enanthaat',
       'medicationTestosteroneValerate' => 'Testosteronvaleraat',
       'medicationTestosteroneCypionate' => 'Testosteroncypionaat',

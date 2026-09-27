@@ -36,7 +36,6 @@
   "schedulesCreated_other": "{{count}} creados",
   "language": "Idioma",
   "languageFollowDevice": "Seguir o idioma do dispositivo",
-  "selectLanguage": "Seleccionar idioma",
   "enableNotifications": "Activar notificacións",
   "enableNotificationsDescription": "Enviar recordatorios",
   "notificationsDisabledTitle": "As notificacións están desactivadas",

@@ -128,8 +128,6 @@ class TranslationsZhHans extends Translations
   @override
   String get languageFollowDevice => '跟随系统语言';
   @override
-  String get selectLanguage => '选择语言';
-  @override
   String get enableNotifications => '启用通知';
   @override
   String get enableNotificationsDescription => '发送提醒';
@@ -365,7 +363,7 @@ class TranslationsZhHans extends Translations
   @override
   String get concentration => '浓度';
   @override
-  String concentrationLabelPerUnit({required Object unit}) => '每 ${unit} 剂量';
+  String dosePerUnitLabel({required Object unit}) => '每 ${unit} 剂量';
   @override
   String get editItem => '编辑物品';
   @override
@@ -576,6 +574,24 @@ class TranslationsZhHans extends Translations
   @override
   String get cannotExceedTotalCapacity => '不能超过总容量';
   @override
+  String get backupSaved => '备份已保存';
+  @override
+  String get secretSettings => '隐藏设置';
+  @override
+  String get slimeMode => '史莱姆模式';
+  @override
+  String get week => '周';
+  @override
+  String get twoWeeks => '2周';
+  @override
+  String get threeMonths => '3个月';
+  @override
+  String get sixMonths => '6个月';
+  @override
+  String get month => '1个月';
+  @override
+  String get year => '年';
+  @override
   String daysAgoCount({required num count}) =>
       (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('zh'))(
         count,
@@ -773,7 +789,6 @@ extension on TranslationsZhHans {
       'noSchedules' => '暂无计划',
       'language' => '语言',
       'languageFollowDevice' => '跟随系统语言',
-      'selectLanguage' => '选择语言',
       'enableNotifications' => '启用通知',
       'enableNotificationsDescription' => '发送提醒',
       'anchorToLastIntake' => '按上次服用时间重新计算',
@@ -898,7 +913,7 @@ extension on TranslationsZhHans {
       'adminRoute' => '给药途径',
       'totalAmount' => '总量',
       'concentration' => '浓度',
-      'concentrationLabelPerUnit' => ({required Object unit}) => '每 ${unit} 剂量',
+      'dosePerUnitLabel' => ({required Object unit}) => '每 ${unit} 剂量',
       'editItem' => '编辑物品',
       'usedAmount' => '已用量',
       'deleteItem' => ({required Object name}) => '删除 ${name}？',
@@ -1003,6 +1018,15 @@ extension on TranslationsZhHans {
       'mustBeAtMost' => ({required Object max}) => '不能超过 ${max}',
       'invalidTotalAmount' => '总量无效',
       'cannotExceedTotalCapacity' => '不能超过总容量',
+      'backupSaved' => '备份已保存',
+      'secretSettings' => '隐藏设置',
+      'slimeMode' => '史莱姆模式',
+      'week' => '周',
+      'twoWeeks' => '2周',
+      'threeMonths' => '3个月',
+      'sixMonths' => '6个月',
+      'month' => '1个月',
+      'year' => '年',
       'daysAgoCount' => ({required num count}) =>
           (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('zh'))(
             count,

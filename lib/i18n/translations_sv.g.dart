@@ -96,8 +96,6 @@ class TranslationsSv extends Translations
   @override
   String get languageFollowDevice => 'Använd enhetens språk';
   @override
-  String get selectLanguage => 'Välj Språk';
-  @override
   String get enableNotifications => 'Aktivera aviseringar';
   @override
   String get ester => 'Ester';
@@ -405,7 +403,7 @@ class TranslationsSv extends Translations
   @override
   String get concentration => 'Koncentration';
   @override
-  String concentrationLabelPerUnit({required Object unit}) => 'Dos per ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Dos per ${unit}';
   @override
   String get editItem => 'Redigera artikel';
   @override
@@ -756,7 +754,6 @@ extension on TranslationsSv {
       'noSchedules' => 'Inga scheman',
       'language' => 'Språk',
       'languageFollowDevice' => 'Använd enhetens språk',
-      'selectLanguage' => 'Välj Språk',
       'enableNotifications' => 'Aktivera aviseringar',
       'ester' => 'Ester',
       'estradiol' => 'Östradiol',
@@ -924,8 +921,7 @@ extension on TranslationsSv {
       'adminRoute' => 'Administreringsväg',
       'totalAmount' => 'Total mängd',
       'concentration' => 'Koncentration',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Dos per ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Dos per ${unit}',
       'editItem' => 'Redigera artikel',
       'usedAmount' => 'Använd mängd',
       'deleteItem' => ({required Object name}) => 'Ta bort ${name}?',

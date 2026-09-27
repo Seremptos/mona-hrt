@@ -86,7 +86,7 @@ class TranslationsEs extends Translations
   @override
   String get neverTakenYet => 'Aún no tomado';
   @override
-  String get scheduleFrequencyDaily => 'Cada día';
+  String get scheduleFrequencyDaily => 'Diariamente';
   @override
   String get scheduleFrequencyInterval => 'Intervalo';
   @override
@@ -111,8 +111,6 @@ class TranslationsEs extends Translations
   String get language => 'Idioma';
   @override
   String get languageFollowDevice => 'Seguir el idioma del dispositivo';
-  @override
-  String get selectLanguage => 'Seleccionar idioma';
   @override
   String get enableNotifications => 'Activar notificaciones';
   @override
@@ -520,8 +518,7 @@ class TranslationsEs extends Translations
   @override
   String get noItemsToAdd => 'No hay elementos disponibles';
   @override
-  String concentrationLabelPerUnit({required Object unit}) =>
-      'Dosis por ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Dosis por ${unit}';
   @override
   String get allItemsFilter => 'Todos';
   @override
@@ -774,7 +771,7 @@ extension on TranslationsEs {
       'tomorrow' => 'mañana',
       'lastTaken' => 'Última toma',
       'neverTakenYet' => 'Aún no tomado',
-      'scheduleFrequencyDaily' => 'Cada día',
+      'scheduleFrequencyDaily' => 'Diariamente',
       'scheduleFrequencyInterval' => 'Intervalo',
       'scheduleFrequencyWeekly' => 'Semanal',
       'newUpdateAvailable' => '¡Hay una nueva actualización disponible!',
@@ -787,7 +784,6 @@ extension on TranslationsEs {
       'noSchedules' => 'Sin horarios',
       'language' => 'Idioma',
       'languageFollowDevice' => 'Seguir el idioma del dispositivo',
-      'selectLanguage' => 'Seleccionar idioma',
       'enableNotifications' => 'Activar notificaciones',
       'enableNotificationsDescription' => 'Enviar recordatorios',
       'notificationsDisabledTitle' => 'Las notificaciones están desactivadas',
@@ -1005,8 +1001,7 @@ extension on TranslationsEs {
           'El tiempo antes de las ${time} cuenta para el día anterior',
       'chooseItem' => 'Elige un elemento',
       'noItemsToAdd' => 'No hay elementos disponibles',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Dosis por ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Dosis por ${unit}',
       'allItemsFilter' => 'Todos',
       'genericItems' => 'Consumibles',
       'genericItemType' => 'Consumible',

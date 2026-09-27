@@ -114,8 +114,6 @@ class TranslationsPl extends Translations
   @override
   String get languageFollowDevice => 'Użyj języka urządzenia';
   @override
-  String get selectLanguage => 'Wybierz język';
-  @override
   String get enableNotifications => 'Włącz powiadomienia';
   @override
   String get enableNotificationsDescription => 'Wysyłaj przypomnienia';
@@ -365,8 +363,7 @@ class TranslationsPl extends Translations
   @override
   String get concentration => 'Stężenie';
   @override
-  String concentrationLabelPerUnit({required Object unit}) =>
-      'Dawka na ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Dawka na ${unit}';
   @override
   String get editItem => 'Edytuj przedmiot';
   @override
@@ -790,7 +787,6 @@ extension on TranslationsPl {
       'noSchedules' => 'Brak harmonogramów',
       'language' => 'Język',
       'languageFollowDevice' => 'Użyj języka urządzenia',
-      'selectLanguage' => 'Wybierz język',
       'enableNotifications' => 'Włącz powiadomienia',
       'enableNotificationsDescription' => 'Wysyłaj przypomnienia',
       'anchorToLastIntake' => 'Przelicz na podstawie ostatniego przyjęcia',
@@ -927,8 +923,7 @@ extension on TranslationsPl {
       'adminRoute' => 'Droga podania',
       'totalAmount' => 'Łączna ilość',
       'concentration' => 'Stężenie',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Dawka na ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Dawka na ${unit}',
       'editItem' => 'Edytuj przedmiot',
       'usedAmount' => 'Zużyta ilość',
       'deleteItem' => ({required Object name}) => 'Usunąć ${name}?',

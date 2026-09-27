@@ -54,8 +54,6 @@ class TranslationsSq extends Translations
 
   // Translations
   @override
-  String get appTitle => 'Mona';
-  @override
   String get nav_home => 'Mona';
   @override
   String get nav_intakes => 'Marrje';
@@ -128,8 +126,6 @@ class TranslationsSq extends Translations
   String get language => 'Gjuha';
   @override
   String get languageFollowDevice => 'Ndiq gjuhën e pajisjes';
-  @override
-  String get selectLanguage => 'Zgjidh gjuhën';
   @override
   String get enableNotifications => 'Aktivizo njoftimet';
   @override
@@ -381,8 +377,7 @@ class TranslationsSq extends Translations
   @override
   String get concentration => 'Përqendrimi';
   @override
-  String concentrationLabelPerUnit({required Object unit}) =>
-      'Doza për ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Doza për ${unit}';
   @override
   String get editItem => 'Modifiko artikullin';
   @override
@@ -588,6 +583,40 @@ class TranslationsSq extends Translations
   @override
   String get estradiolLevelsTitle => 'Nivelet e estradiolit';
   @override
+  String get backupSaved => 'Kopja rezervë u ruajt';
+  @override
+  String get secretSettings => 'Cilësime sekrete';
+  @override
+  String get slimeMode => 'Modaliteti slime';
+  @override
+  String get week => 'J';
+  @override
+  String get twoWeeks => '2 J';
+  @override
+  String get threeMonths => '3 M';
+  @override
+  String get sixMonths => '6 M';
+  @override
+  String get month => 'M';
+  @override
+  String get year => 'V';
+  @override
+  String get deliveryForm => 'Forma';
+  @override
+  String get deliveryFormPump => 'Pompë';
+  @override
+  String get deliveryFormSachet => 'Qeskë';
+  @override
+  String get deliveryFormGram => 'Tub';
+  @override
+  String get applicationSites => 'Vendet e aplikimit';
+  @override
+  String get applicationSitesInstructions =>
+      'Menaxho vendet ndërmjet të cilave alternon. Vendet sugjerohen bazuar në historikun e marrjeve të tua. Shtyp gjatë për t\'i rirenditur.';
+  @override
+  String mustBeAtMost({required Object max}) =>
+      'Duhet të jetë më së shumti ${max}';
+  @override
   String daysAgoCount({required num count}) =>
       (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sq'))(
         count,
@@ -749,6 +778,20 @@ class TranslationsSq extends Translations
         one: 'spraj',
         other: 'spraje',
       );
+  @override
+  String administrationRouteUnitSachet({required num count}) =>
+      (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sq'))(
+        count,
+        one: 'qeskë',
+        other: 'qeska',
+      );
+  @override
+  String administrationRouteUnitGram({required num count}) =>
+      (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sq'))(
+        count,
+        one: 'gram',
+        other: 'gramë',
+      );
 }
 
 /// The flat map containing all translations for locale <sq>.
@@ -759,7 +802,6 @@ class TranslationsSq extends Translations
 extension on TranslationsSq {
   dynamic _flatMapFunction(String path) {
     return switch (path) {
-      'appTitle' => 'Mona',
       'nav_home' => 'Mona',
       'nav_intakes' => 'Marrje',
       'nav_levels' => 'Nivele',
@@ -796,7 +838,6 @@ extension on TranslationsSq {
       'noSchedules' => 'Nuk ka orare',
       'language' => 'Gjuha',
       'languageFollowDevice' => 'Ndiq gjuhën e pajisjes',
-      'selectLanguage' => 'Zgjidh gjuhën',
       'enableNotifications' => 'Aktivizo njoftimet',
       'enableNotificationsDescription' => 'Dërgo kujtues',
       'anchorToLastIntake' => 'Rillogarit sipas marrjes së fundit',
@@ -935,8 +976,7 @@ extension on TranslationsSq {
       'adminRoute' => 'Rruga e administrimit',
       'totalAmount' => 'Sasia totale',
       'concentration' => 'Përqendrimi',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Doza për ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Doza për ${unit}',
       'editItem' => 'Modifiko artikullin',
       'usedAmount' => 'Sasia e përdorur',
       'deleteItem' => ({required Object name}) => 'Të fshihet ${name}?',
@@ -1041,6 +1081,24 @@ extension on TranslationsSq {
       'empty_levels' =>
         'Shto një analizë gjaku ose regjistro një injeksion estradioli për të fillua',
       'estradiolLevelsTitle' => 'Nivelet e estradiolit',
+      'backupSaved' => 'Kopja rezervë u ruajt',
+      'secretSettings' => 'Cilësime sekrete',
+      'slimeMode' => 'Modaliteti slime',
+      'week' => 'J',
+      'twoWeeks' => '2 J',
+      'threeMonths' => '3 M',
+      'sixMonths' => '6 M',
+      'month' => 'M',
+      'year' => 'V',
+      'deliveryForm' => 'Forma',
+      'deliveryFormPump' => 'Pompë',
+      'deliveryFormSachet' => 'Qeskë',
+      'deliveryFormGram' => 'Tub',
+      'applicationSites' => 'Vendet e aplikimit',
+      'applicationSitesInstructions' =>
+        'Menaxho vendet ndërmjet të cilave alternon. Vendet sugjerohen bazuar në historikun e marrjeve të tua. Shtyp gjatë për t\'i rirenditur.',
+      'mustBeAtMost' => ({required Object max}) =>
+          'Duhet të jetë më së shumti ${max}',
       'daysAgoCount' => ({required num count}) =>
           (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sq'))(
             count,
@@ -1179,6 +1237,18 @@ extension on TranslationsSq {
             count,
             one: 'spraj',
             other: 'spraje',
+          ),
+      'administrationRouteUnitSachet' => ({required num count}) =>
+          (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sq'))(
+            count,
+            one: 'qeskë',
+            other: 'qeska',
+          ),
+      'administrationRouteUnitGram' => ({required num count}) =>
+          (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sq'))(
+            count,
+            one: 'gram',
+            other: 'gramë',
           ),
       _ => null,
     };

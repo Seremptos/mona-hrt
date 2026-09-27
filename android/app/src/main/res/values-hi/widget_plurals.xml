@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="on_hrt_for_days">
+        <item quantity="one">%d दिनों के लिए HRT पर</item>
+        <item quantity="other">%d दिनों के लिए HRT पर</item>
+    </plurals>
+    <plurals name="on_hrt_for_months">
+        <item quantity="one">%d महीनों के लिए HRT पर</item>
+        <item quantity="other">%d महीनों के लिए HRT पर</item>
+    </plurals>
+</resources>

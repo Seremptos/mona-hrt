@@ -86,7 +86,7 @@ class TranslationsSk extends Translations
   @override
   String get neverTakenYet => 'Nevzatá nikdy';
   @override
-  String get scheduleFrequencyDaily => 'Každý deň';
+  String get scheduleFrequencyDaily => 'Denne';
   @override
   String get scheduleFrequencyInterval => 'Interval';
   @override
@@ -111,8 +111,6 @@ class TranslationsSk extends Translations
   String get language => 'Jazyk';
   @override
   String get languageFollowDevice => 'Jazyk podľa zariadenia';
-  @override
-  String get selectLanguage => 'Vyber jazyk';
   @override
   String get enableNotifications => 'Zapni notifikácie';
   @override
@@ -551,8 +549,7 @@ class TranslationsSk extends Translations
   @override
   String get placementRightAbdomen => 'Pravá abdominálna oblasť';
   @override
-  String concentrationLabelPerUnit({required Object unit}) =>
-      'Dávka na ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Dávka na ${unit}';
   @override
   String get HrtCounter => 'Čas na HRT';
   @override
@@ -562,6 +559,35 @@ class TranslationsSk extends Translations
   String get hrtWidgetPreviewSample => 'Na HRT 8 mesiacov';
   @override
   String get hrtWidgetPreviewIntakeSample => '16 zaznamenaných dávok';
+  @override
+  String get asNeeded => 'Podľa potreby';
+  @override
+  String get scheduleFrequencyDailyDescription => 'Každý deň v určených časoch';
+  @override
+  String get scheduleFrequencyIntervalDescription => 'Každých pár dní';
+  @override
+  String get scheduleFrequencyWeeklyDescription => 'Určité dni v týždni';
+  @override
+  String get scheduleFrequencyMonthlyDescription =>
+      'Každý mesiac v rovnaký deň';
+  @override
+  String get scheduleFrequencyAsNeeded => 'Podľa potreby';
+  @override
+  String get scheduleFrequencyAsNeededDescription =>
+      'Bez pevne stanoveného času';
+  @override
+  String get backupSaved => 'Záloha bola uložená';
+  @override
+  String get secretSettings => 'Skryté nastavenia';
+  @override
+  String get slimeMode => 'Slizový mód';
+  @override
+  String get empty_levels =>
+      'Ak chcete začať, pridajte výsledok krvného testu alebo zaznamenajte injekciu estradiolu';
+  @override
+  String get estradiolLevelsTitle => 'Hodnoty estradiolu';
+  @override
+  String get unitNgPerMl => 'ng/mL';
   @override
   String daysAgoCount({required num count}) =>
       (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sk'))(
@@ -773,7 +799,7 @@ extension on TranslationsSk {
       'tomorrow' => 'zajtra',
       'lastTaken' => 'Vzatá naposledy',
       'neverTakenYet' => 'Nevzatá nikdy',
-      'scheduleFrequencyDaily' => 'Každý deň',
+      'scheduleFrequencyDaily' => 'Denne',
       'scheduleFrequencyInterval' => 'Interval',
       'scheduleFrequencyWeekly' => 'Týždenne',
       'newUpdateAvailable' => 'Je k dispozícii nová aktualizácia!',
@@ -786,7 +812,6 @@ extension on TranslationsSk {
       'noSchedules' => 'Žiadne plány',
       'language' => 'Jazyk',
       'languageFollowDevice' => 'Jazyk podľa zariadenia',
-      'selectLanguage' => 'Vyber jazyk',
       'enableNotifications' => 'Zapni notifikácie',
       'enableNotificationsDescription' => 'Posielať pripomienky',
       'notificationsDisabledTitle' => 'Notifikácie sú vypnuté',
@@ -1020,12 +1045,25 @@ extension on TranslationsSk {
       'placementRightButtock' => 'Pravý sedací sval',
       'placementLeftAbdomen' => 'Ľavá abdominálna oblasť',
       'placementRightAbdomen' => 'Pravá abdominálna oblasť',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Dávka na ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Dávka na ${unit}',
       'HrtCounter' => 'Čas na HRT',
       'hrtWidgetPlaceholder' => 'Otvorte Mona a zaznamenajte svoje prvé dávky',
       'hrtWidgetPreviewSample' => 'Na HRT 8 mesiacov',
       'hrtWidgetPreviewIntakeSample' => '16 zaznamenaných dávok',
+      'asNeeded' => 'Podľa potreby',
+      'scheduleFrequencyDailyDescription' => 'Každý deň v určených časoch',
+      'scheduleFrequencyIntervalDescription' => 'Každých pár dní',
+      'scheduleFrequencyWeeklyDescription' => 'Určité dni v týždni',
+      'scheduleFrequencyMonthlyDescription' => 'Každý mesiac v rovnaký deň',
+      'scheduleFrequencyAsNeeded' => 'Podľa potreby',
+      'scheduleFrequencyAsNeededDescription' => 'Bez pevne stanoveného času',
+      'backupSaved' => 'Záloha bola uložená',
+      'secretSettings' => 'Skryté nastavenia',
+      'slimeMode' => 'Slizový mód',
+      'empty_levels' =>
+        'Ak chcete začať, pridajte výsledok krvného testu alebo zaznamenajte injekciu estradiolu',
+      'estradiolLevelsTitle' => 'Hodnoty estradiolu',
+      'unitNgPerMl' => 'ng/mL',
       'daysAgoCount' => ({required num count}) =>
           (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('sk'))(
             count,

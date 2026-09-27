@@ -112,8 +112,6 @@ class TranslationsPt extends Translations
   @override
   String get languageFollowDevice => 'Seguir o idioma do dispositivo';
   @override
-  String get selectLanguage => 'Selecionar idioma';
-  @override
   String get enableNotifications => 'Ativar notificações';
   @override
   String get enableNotificationsDescription => 'Enviar lembretes';
@@ -516,8 +514,7 @@ class TranslationsPt extends Translations
   @override
   String get noItemsToAdd => 'Não há itens disponíveis';
   @override
-  String concentrationLabelPerUnit({required Object unit}) =>
-      'Dose por ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Dose por ${unit}';
   @override
   String get allItemsFilter => 'Todos';
   @override
@@ -786,7 +783,6 @@ extension on TranslationsPt {
       'noSchedules' => 'Sem cronogramas',
       'language' => 'Idioma',
       'languageFollowDevice' => 'Seguir o idioma do dispositivo',
-      'selectLanguage' => 'Selecionar idioma',
       'enableNotifications' => 'Ativar notificações',
       'enableNotificationsDescription' => 'Enviar lembretes',
       'notificationsDisabledTitle' => 'As notificações estão desativadas',
@@ -1004,8 +1000,7 @@ extension on TranslationsPt {
           'O tempo antes das ${time} conta para o dia anterior',
       'chooseItem' => 'Escolhe um item',
       'noItemsToAdd' => 'Não há itens disponíveis',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Dose por ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Dose por ${unit}',
       'allItemsFilter' => 'Todos',
       'medicationItemsFilter' => 'Medicação',
       'genericItems' => 'Consumíveis',

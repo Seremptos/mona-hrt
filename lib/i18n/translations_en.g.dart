@@ -163,9 +163,6 @@ class Translations with BaseTranslations<AppLocale, Translations> {
   /// en: 'Follow device language'
   String get languageFollowDevice => 'Follow device language';
 
-  /// en: 'Select Language'
-  String get selectLanguage => 'Select Language';
-
   /// en: 'Enable notifications'
   String get enableNotifications => 'Enable notifications';
 
@@ -238,6 +235,30 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 
   /// en: 'Mona version {version}'
   String appVersion({required Object version}) => 'Mona version ${version}';
+
+  /// en: 'Get involved'
+  String get getInvolved => 'Get involved';
+
+  /// en: 'Report a bug'
+  String get reportBug => 'Report a bug';
+
+  /// en: 'Open an issue on GitHub'
+  String get reportBugDescription => 'Open an issue on GitHub';
+
+  /// en: 'Translate the app'
+  String get translateApp => 'Translate the app';
+
+  /// en: 'Help translate Mona on Weblate'
+  String get translateAppDescription => 'Help translate Mona on Weblate';
+
+  /// en: 'Is your language missing?'
+  String get languageMissing => 'Is your language missing?';
+
+  /// en: 'Donate'
+  String get donate => 'Donate';
+
+  /// en: 'Support Mona on Ko-fi'
+  String get donateDescription => 'Support Mona on Ko-fi';
 
   /// en: 'Backup saved'
   String get backupSaved => 'Backup saved';
@@ -557,8 +578,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
   String get concentration => 'Concentration';
 
   /// en: 'Dose per {unit}'
-  String concentrationLabelPerUnit({required Object unit}) =>
-      'Dose per ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Dose per ${unit}';
 
   /// en: 'Edit item'
   String get editItem => 'Edit item';
@@ -777,6 +797,9 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 
   /// en: 'mg'
   String get unitMilligram => 'mg';
+
+  /// en: 'µg/day'
+  String get unitMicrogramPerDay => 'µg/day';
 
   /// en: 'pg/mL'
   String get unitPgPerMl => 'pg/mL';
@@ -1124,7 +1147,6 @@ extension on Translations {
       'noSchedules' => 'No schedules',
       'language' => 'Language',
       'languageFollowDevice' => 'Follow device language',
-      'selectLanguage' => 'Select Language',
       'enableNotifications' => 'Enable notifications',
       'enableNotificationsDescription' => 'Send reminders',
       'anchorToLastIntake' => 'Recalculate based on last intake',
@@ -1152,6 +1174,14 @@ extension on Translations {
       'checkForUpdatesDescription' =>
         'Check for the latest version manually\nThis will connect you to Internet\n(No data will be sent)',
       'appVersion' => ({required Object version}) => 'Mona version ${version}',
+      'getInvolved' => 'Get involved',
+      'reportBug' => 'Report a bug',
+      'reportBugDescription' => 'Open an issue on GitHub',
+      'translateApp' => 'Translate the app',
+      'translateAppDescription' => 'Help translate Mona on Weblate',
+      'languageMissing' => 'Is your language missing?',
+      'donate' => 'Donate',
+      'donateDescription' => 'Support Mona on Ko-fi',
       'backupSaved' => 'Backup saved',
       'exportFailed' => ({required Object error}) =>
           'Failed to export: ${error}',
@@ -1271,8 +1301,7 @@ extension on Translations {
       'adminRoute' => 'Administration route',
       'totalAmount' => 'Total amount',
       'concentration' => 'Concentration',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Dose per ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Dose per ${unit}',
       'editItem' => 'Edit item',
       'usedAmount' => 'Used amount',
       'deleteItem' => ({required Object name}) => 'Delete ${name}?',
@@ -1347,6 +1376,7 @@ extension on Translations {
       'deliveryFormSachet' => 'Sachet',
       'deliveryFormGram' => 'Tube',
       'unitMilligram' => 'mg',
+      'unitMicrogramPerDay' => 'µg/day',
       'unitPgPerMl' => 'pg/mL',
       'unitPmolPerL' => 'pmol/L',
       'unitNgPerDl' => 'ng/dL',

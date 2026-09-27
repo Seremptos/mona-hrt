@@ -112,8 +112,6 @@ class TranslationsUk extends Translations
   @override
   String get languageFollowDevice => 'Мова пристрою';
   @override
-  String get selectLanguage => 'Вибрати мову';
-  @override
   String get enableNotifications => 'Увімкнути сповіщення';
   @override
   String get enableNotificationsDescription => 'Надсилати нагадування';
@@ -516,7 +514,7 @@ class TranslationsUk extends Translations
   @override
   String get noItemsToAdd => 'Немає доступних препаратів';
   @override
-  String concentrationLabelPerUnit({required Object unit}) => 'Доза на ${unit}';
+  String dosePerUnitLabel({required Object unit}) => 'Доза на ${unit}';
   @override
   String get allItemsFilter => 'Усі';
   @override
@@ -785,7 +783,6 @@ extension on TranslationsUk {
       'noSchedules' => 'Розкладів немає',
       'language' => 'Мова',
       'languageFollowDevice' => 'Мова пристрою',
-      'selectLanguage' => 'Вибрати мову',
       'enableNotifications' => 'Увімкнути сповіщення',
       'enableNotificationsDescription' => 'Надсилати нагадування',
       'notificationsDisabledTitle' => 'Сповіщення вимкнено',
@@ -999,8 +996,7 @@ extension on TranslationsUk {
           'Час до ${time} зараховується до попереднього дня',
       'chooseItem' => 'Виберіть препарат',
       'noItemsToAdd' => 'Немає доступних препаратів',
-      'concentrationLabelPerUnit' => ({required Object unit}) =>
-          'Доза на ${unit}',
+      'dosePerUnitLabel' => ({required Object unit}) => 'Доза на ${unit}',
       'allItemsFilter' => 'Усі',
       'medicationItemsFilter' => 'Ліки',
       'genericItems' => 'Витратні матеріали',
