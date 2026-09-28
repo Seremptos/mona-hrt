@@ -26,6 +26,7 @@ class LanguagePage extends StatefulWidget {
     'fr': (english: 'French', native: 'Français'),
     'gl': (english: 'Galician', native: 'Galego'),
     'hi': (english: 'Hindi', native: 'हिन्दी'),
+    'hu': (english: 'Hungarian', native: 'Magyar'),
     'id': (english: 'Indonesian', native: 'Bahasa Indonesia'),
     'is': (english: 'Icelandic', native: 'Íslenska'),
     'it': (english: 'Italian', native: 'Italiano'),

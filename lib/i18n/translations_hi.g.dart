@@ -174,7 +174,7 @@ class TranslationsHi extends Translations
   String get checkForUpdates => 'Updates dekhe';
   @override
   String get checkForUpdatesDescription =>
-      'Naye version ke liye manually check kare\n yeh aapko internet se connect karega\(Koi data nahi milega)';
+      'Naye version ke liye manually check kare\n yeh aapko internet se connect karega\n(Koi data nahi milega)';
   @override
   String appVersion({required Object version}) => 'मोना संस्करण ${version}';
   @override
@@ -862,7 +862,7 @@ extension on TranslationsHi {
         'Apne aap check jab naye updates launch ho jayenge',
       'checkForUpdates' => 'Updates dekhe',
       'checkForUpdatesDescription' =>
-        'Naye version ke liye manually check kare\n yeh aapko internet se connect karega\(Koi data nahi milega)',
+        'Naye version ke liye manually check kare\n yeh aapko internet se connect karega\n(Koi data nahi milega)',
       'appVersion' => ({required Object version}) => 'मोना संस्करण ${version}',
       'backupSaved' => 'बैकअप बचाया',
       'exportFailed' => ({required Object error}) =>
