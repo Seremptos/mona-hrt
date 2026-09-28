@@ -251,8 +251,8 @@ class Translations with BaseTranslations<AppLocale, Translations> {
   /// en: 'Help translate Mona on Weblate'
   String get translateAppDescription => 'Help translate Mona on Weblate';
 
-  /// en: 'Is your language missing?'
-  String get languageMissing => 'Is your language missing?';
+  /// en: 'Is a translation missing?'
+  String get missingTranslation => 'Is a translation missing?';
 
   /// en: 'Donate'
   String get donate => 'Donate';
@@ -1179,7 +1179,7 @@ extension on Translations {
       'reportBugDescription' => 'Open an issue on GitHub',
       'translateApp' => 'Translate the app',
       'translateAppDescription' => 'Help translate Mona on Weblate',
-      'languageMissing' => 'Is your language missing?',
+      'missingTranslation' => 'Is a translation missing?',
       'donate' => 'Donate',
       'donateDescription' => 'Support Mona on Ko-fi',
       'backupSaved' => 'Backup saved',

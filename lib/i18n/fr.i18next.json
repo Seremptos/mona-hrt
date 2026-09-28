@@ -79,7 +79,7 @@
   "reportBugDescription": "Ouvrir une issue sur GitHub",
   "translateApp": "Traduire l'application",
   "translateAppDescription": "Aider à traduire Mona sur Weblate",
-  "languageMissing": "Il manque votre langue ?",
+  "missingTranslation": "Il manque une traduction ?",
   "donate": "Faire un don",
   "donateDescription": "Soutenir Mona sur Ko-fi",
   "backupSaved": "Sauvegarde enregistrée",
