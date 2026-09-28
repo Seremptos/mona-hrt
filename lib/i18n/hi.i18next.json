@@ -67,7 +67,7 @@
   "autoUpdate": "Apne aap update",
   "autoUpdateDescription": "Apne aap check jab naye updates launch ho jayenge",
   "checkForUpdates": "Updates dekhe",
-  "checkForUpdatesDescription": "Naye version ke liye manually check kare\\n yeh aapko internet se connect karega\\(Koi data nahi milega)",
+  "checkForUpdatesDescription": "Naye version ke liye manually check kare\\n yeh aapko internet se connect karega\\n(Koi data nahi milega)",
   "appVersion": "मोना संस्करण {{version}}",
   "backupSaved": "बैकअप बचाया",
   "exportFailed": "निर्यात करने में विफल: {{error}}",
