@@ -1,1 +1,20 @@
-{}
+{
+  "appTitle": "Mona",
+  "nav_home": "Mona",
+  "nav_intakes": "Bevevések",
+  "nav_levels": "Szintek",
+  "nav_supplies": "Készlet",
+  "takeAnIntake": "Bevevés felírása",
+  "addAnItem": "Item hozzáadása",
+  "empty_home": "Kezdje egy időbeosztás hozzáadásával a Beállításokban",
+  "allDone": "Kész!",
+  "noIntakesDue": "Nincs mára felírt adag",
+  "upcoming": "Következő",
+  "asNeeded": "Ahogy szükséges",
+  "taken": "Bevéve",
+  "daysAgoCount_one": "{{count}} napja",
+  "daysAgoCount_other": "{{count}} napja",
+  "yesterday": "tegnap",
+  "inDaysCount_one": "{{count}} nap múlva",
+  "inDaysCount_other": "{{count}} nap múlva"
+}
