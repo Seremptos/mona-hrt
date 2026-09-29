@@ -132,7 +132,7 @@ MedicationIntake aMedicationIntake({
   Ester? ester,
   List<Placement> placements = const [],
   DosingBasis dosingBasis = DosingBasis.mass,
-  InjectionType injectionType = InjectionType.intramuscular,
+  InjectionType? injectionType,
 }) {
   final takenAt = !taken
       ? null

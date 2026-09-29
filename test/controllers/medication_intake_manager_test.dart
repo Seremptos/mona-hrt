@@ -1360,6 +1360,51 @@ void main() {
       });
     });
 
+    group('suggestInjectionType', () {
+      test('returns null when the schedule is not an injection', () {
+        // Arrange
+        when(mockMedicationIntakeProvider.getTakenIntakesDescForSchedule(1234))
+            .thenReturn([
+          aMedicationIntake(administrationRoute: AdministrationRoute.oral)
+        ]);
+
+        // Act
+        final suggestion = manager.suggestInjectionType(scheduleId: 1234);
+
+        // Assert
+        expect(suggestion, isNull);
+      });
+
+      test('returns null when there are no intakes for a schedule', () {
+        // Arrange
+        when(mockMedicationIntakeProvider.getTakenIntakesDescForSchedule(1234))
+            .thenReturn([]);
+
+        // Act
+        final suggestion = manager.suggestInjectionType(scheduleId: 1234);
+
+        // Assert
+        expect(suggestion, isNull);
+      });
+
+      test('returns the injection type of the last intake', () {
+        // Arrange
+        when(mockMedicationIntakeProvider.getLastTakenIntakeForSchedule(1234))
+            .thenReturn(
+          aMedicationIntake(
+            administrationRoute: AdministrationRoute.injection,
+            injectionType: InjectionType.subcutaneous,
+          ),
+        );
+
+        // Act
+        final suggestion = manager.suggestInjectionType(scheduleId: 1234);
+
+        // Assert
+        expect(suggestion, InjectionType.subcutaneous);
+      });
+    });
+
     group('suggestMedicationItem', () {
       test('suggests the previous intake vial when it still matches', () {
         // Arrange

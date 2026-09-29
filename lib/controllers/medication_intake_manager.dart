@@ -3,6 +3,7 @@ import 'package:decimal/decimal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:mona/controllers/supply_item_manager.dart';
+import 'package:mona/data/model/administration_route.dart';
 import 'package:mona/data/model/generic_supply_item.dart';
 import 'package:mona/data/model/injection_type.dart';
 import 'package:mona/data/model/medication_schedule.dart';
@@ -209,6 +210,18 @@ class MedicationIntakeManager {
 
   Placement? suggestNextPlacement({required int scheduleId}) =>
       getOrderedPlacements(scheduleId: scheduleId).firstOrNull;
+
+  InjectionType? suggestInjectionType({required int scheduleId}) {
+    final lastIntake =
+        _medicationIntakeProvider.getLastTakenIntakeForSchedule(scheduleId);
+
+    if (lastIntake == null ||
+        lastIntake.administrationRoute != AdministrationRoute.injection) {
+      return null;
+    }
+
+    return lastIntake.injectionType;
+  }
 
   MedicationSupplyItem? suggestMedicationItem({
     required MedicationSchedule schedule,
