@@ -114,6 +114,7 @@ class MedicationIntakeManager {
     List<GenericSupply> genericItems = const [],
     String? notes,
     List<Placement> placements = const [],
+    InjectionType? injectionType,
   }) async {
     if (!takenDateTime.isUtc) {
       throw ArgumentError('takenDateTime must be in UTC');
@@ -176,6 +177,7 @@ class MedicationIntakeManager {
       genericSupplyItemIds: genericItems.map((item) => item.id).toList(),
       notes: notes,
       placements: placements,
+      injectionType: injectionType,
     ));
   }
 

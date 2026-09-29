@@ -834,12 +834,14 @@ void main() {
           medicationSupplyItemId: null,
           wastedAmount: null,
           deadSpace: null,
+          injectionType: InjectionType.subcutaneous,
         );
         final newDose = Decimal.parse('3');
         final newWasted = Decimal.parse('0.2');
         final newDeadSpace = Decimal.parse('50');
         final newTimezone = 'Europe/Paris';
         final newNotes = 'edited';
+        final newType = InjectionType.intramuscular;
 
         when(mockMedicationIntakeProvider.updateIntake(any))
             .thenAnswer((inv) async {
@@ -857,6 +859,7 @@ void main() {
           placements: [aCustomPlacement('belly')],
           medicationItem: null,
           notes: newNotes,
+          injectionType: newType,
         );
 
         // Assert
@@ -873,7 +876,8 @@ void main() {
                   [aCustomPlacement('belly')])
               .having((i) => i.notes, 'notes', newNotes)
               .having((i) => i.medicationSupplyItemId, 'medicationSupplyItemId',
-                  isNull),
+                  isNull)
+              .having((i) => i.injectionType, 'injectionType', newType),
         );
       });
 
