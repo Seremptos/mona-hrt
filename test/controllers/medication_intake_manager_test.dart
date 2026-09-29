@@ -8,6 +8,7 @@ import 'package:mona/data/model/administration_route.dart';
 import 'package:mona/data/model/dosing_basis.dart';
 import 'package:mona/data/model/ester.dart';
 import 'package:mona/data/model/generic_supply_item.dart';
+import 'package:mona/data/model/injection_type.dart';
 import 'package:mona/data/model/medication_intake.dart';
 import 'package:mona/data/model/medication_supply_item.dart';
 import 'package:mona/data/model/molecule.dart';
@@ -148,6 +149,7 @@ void main() {
             schedule: schedule,
             placements: [aPlacement(preset: PlacementPreset.leftThigh)],
             notes: notes,
+            injectionType: InjectionType.subcutaneous,
           );
         });
 
@@ -211,6 +213,11 @@ void main() {
         test('sets notes on the intake', () {
           // Assert
           expect(addedIntake.notes, notes);
+        });
+
+        test('sets injectionType on the intake from the schedule', () {
+          // Assert
+          expect(addedIntake.injectionType, InjectionType.subcutaneous);
         });
       });
 
