@@ -234,9 +234,11 @@ class _TakeMedicationPageState extends State<TakeMedicationPage> {
               .firstWhere((item) => item?.id == selectedId, orElse: () => null);
         }
 
-        if (!isLoading && isInjection) {
+        if (!isLoading) {
+          final manager = MedicationIntakeManager(
+              medicationIntakeProvider, supplyItemProvider, preferencesService);
           _injectionType =
-              InjectionType.intramuscular; // TODO dynamically change
+              manager.suggestInjectionType(scheduleId: widget.schedule.id);
         }
 
         return ModelForm(
