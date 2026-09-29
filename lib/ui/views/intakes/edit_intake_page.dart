@@ -287,16 +287,16 @@ class _EditIntakePageState extends State<EditIntakePage> {
                 infoText: supplyItem.localizedSupplyAmount(_takenDose),
               ),
             FormSpacer(),
-            if (_isInjection)
-              InjectionTypePicker(
-                value: _injectionType ?? InjectionType.intramuscular,
-                onChanged: _onInjectionTypeChanged,
-              ),
             if (_usesPlacements && preferencesService.placementsList.isNotEmpty)
               PlacementPicker(
                 options: preferencesService.placementsList,
                 selected: _selectedPlacements,
                 onChanged: _onPlacementChanged,
+              ),
+            if (_isInjection)
+              InjectionTypePicker(
+                value: _injectionType ?? InjectionType.intramuscular,
+                onChanged: _onInjectionTypeChanged,
               ),
             if (_isInjection ||
                 (_usesPlacements &&

@@ -58,6 +58,7 @@ class _TakeMedicationPageState extends State<TakeMedicationPage> {
   late TextEditingController _notesController;
   bool _isTaken = false;
   InjectionType? _injectionType;
+  bool _hasInitializedInjectionType = false;
 
   String? get _takenDoseError =>
       MedicationIntake.validateDose(_takenDoseController.text);
@@ -234,11 +235,12 @@ class _TakeMedicationPageState extends State<TakeMedicationPage> {
               .firstWhere((item) => item?.id == selectedId, orElse: () => null);
         }
 
-        if (!isLoading) {
+        if (!isLoading && !_hasInitializedInjectionType) {
           final manager = MedicationIntakeManager(
               medicationIntakeProvider, supplyItemProvider, preferencesService);
           _injectionType =
               manager.suggestInjectionType(scheduleId: widget.schedule.id);
+          _hasInitializedInjectionType = true;
         }
 
         return ModelForm(
@@ -272,16 +274,16 @@ class _TakeMedicationPageState extends State<TakeMedicationPage> {
                 infoText: supplyItem.localizedSupplyAmount(_takenDose),
               ),
             FormSpacer(),
-            if (isInjection)
-              InjectionTypePicker(
-                value: _injectionType ?? InjectionType.intramuscular,
-                onChanged: _onInjectionTypeChanged,
-              ),
             if (usesPlacements && _orderedPlacements.isNotEmpty)
               PlacementPicker(
                 options: _orderedPlacements,
                 selected: _selectedPlacements,
                 onChanged: _onPlacementChanged,
+              ),
+            if (isInjection)
+              InjectionTypePicker(
+                value: _injectionType ?? InjectionType.intramuscular,
+                onChanged: _onInjectionTypeChanged,
               ),
             if (isInjection ||
                 (usesPlacements && _orderedPlacements.isNotEmpty))
